@@ -50,10 +50,10 @@ public class MyFrameDecorator  extends IDoFrameListener implements IAppForegroun
     private float maxFps;
 
 
-    private int bestColor;
+    public int bestColor;
     private int normalColor;
     private int middleColor;
-    private int highColor;
+    public int highColor;
     private int frozenColor;
 
 
@@ -177,7 +177,7 @@ public class MyFrameDecorator  extends IDoFrameListener implements IAppForegroun
     private long sumFrameCost;
     private long[] lastCost = new long[1];
     private long sumFrames;
-    private int belongColor = bestColor;
+    public int belongColor = bestColor;
     private long[] lastFrames = new long[1];
     private int[] dropLevel = new int[FrameTracer.DropStatus.values().length];
     private int[] sumDropLevel = new int[FrameTracer.DropStatus.values().length];

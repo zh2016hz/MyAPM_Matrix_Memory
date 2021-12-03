@@ -10,6 +10,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.view.View;
 
+import com.android.projects.mmatrix_ddd.memory.Memory;
 import com.tencent.matrix.trace.view.FrameDecorator;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        new Memory().open(this);
         MyFrameDecorator decorator = MyFrameDecorator.getInstance(this);
-
 
 // 检测浮窗权限
         if (!canDrawOverlays()) {

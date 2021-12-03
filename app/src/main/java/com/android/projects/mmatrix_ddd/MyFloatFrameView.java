@@ -21,6 +21,7 @@ import java.util.LinkedList;
 public class MyFloatFrameView extends LinearLayout {
 
     public TextView fpsView;
+    public TextView momoryView;
     public LineChartView chartView;
     public TextView levelFrozenView;
     public TextView levelHighView;
@@ -50,6 +51,7 @@ public class MyFloatFrameView extends LinearLayout {
         setLayoutParams(new ViewGroup.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
         LayoutInflater.from(context).inflate(R.layout.my_float_frame_view, this);
         fpsView = findViewById(R.id.fps_view);
+        momoryView = findViewById(R.id.memory_view);
         extraInfoView = findViewById(R.id.extra_info);
         sceneView = findViewById(R.id.scene_view);
         extraInfoView.setText("{other info}");
